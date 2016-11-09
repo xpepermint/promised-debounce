@@ -1,0 +1,44 @@
+{
+  "name": "promised-debounce",
+  "version": "0.3.2",
+  "description": "For limiting the time to resolve a promise.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && ava",
+    "prepublish": "npm run build"
+  },
+  "ava": {
+    "files": [
+      "./tests/*.js",
+      "./tests/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpepermint/promised-debounce.git"
+  },
+  "keywords": [
+    "promise",
+    "debounce",
+    "delay",
+    "promised",
+    "as",
+    "with",
+    "resolve",
+    "reject"
+  ],
+  "bugs": {
+    "url": "https://github.com/xpepermint/promised-debounce/issues"
+  },
+  "homepage": "https://github.com/xpepermint/promised-debounce#readme",
+  "author": "Kristijan Sedlak (Xpepermint)",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.16.x",
+    "typescript": "2.0.x"
+  }
+}
