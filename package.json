@@ -1,6 +1,6 @@
 {
   "name": "promised-debounce",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "For limiting the time to resolve a promise.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
