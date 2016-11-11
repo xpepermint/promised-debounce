@@ -4,7 +4,7 @@
 
 > For debouncing function execution.
 
-This is a light weight open source package, written with [TypeScript](https://www.typescriptlang.org). The source code is available on [GitHub](https://github.com/xpepermint/promised-debounce) where you can also find our [issue tracker](https://github.com/xpepermint/promised-debounce/issues).
+This is a light weight open source package for use on **server** or in **browser** (using module bundler). The source code is available on [GitHub](https://github.com/xpepermint/promised-debounce) where you can also find our [issue tracker](https://github.com/xpepermint/promised-debounce/issues).
 
 ## Related Projects
 

@@ -1,23 +1,42 @@
-/*
-* A timeout helper function resolves the provider promise but rejects if the
-* operation takes longer then the provided `timeout`.
-*/
 "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _promise = require("babel-runtime/core-js/promise");
+
+var _promise2 = _interopRequireDefault(_promise);
+
+exports.createDebouncer = createDebouncer;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /*
 * Creates a debounced function.
 */
+
 function createDebouncer() {
-    let timer = null;
-    return function ({ handler, time = 0 }) {
-        var resolve;
-        var promise = new Promise((r) => resolve = r).then(() => (handler.call ? handler() : handler));
-        if (timer)
-            clearTimeout(timer);
-        timer = setTimeout(() => {
-            timer = null;
-            resolve();
-        }, time);
-        return promise;
-    };
+  var timer = null;
+
+  return function (_ref) {
+    var handler = _ref.handler,
+        _ref$time = _ref.time,
+        time = _ref$time === undefined ? 0 : _ref$time;
+
+    var resolve;
+    var promise = new _promise2.default(function (r) {
+      return resolve = r;
+    }).then(function () {
+      return handler.call ? handler() : handler;
+    });
+
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      timer = null;
+      resolve();
+    }, time);
+
+    return promise;
+  };
 }
-exports.createDebouncer = createDebouncer;
